@@ -1,0 +1,29 @@
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class WriteToFileExample {
+
+    public static void main(String[] args) {
+        String filename = "output.txt"; // Specify the file name
+
+        try {
+            FileWriter fw = new FileWriter(filename);
+            PrintWriter pw = new PrintWriter(fw);
+
+            // Write some lines to the file
+            pw.println("Hello, this is line 1");
+            pw.println("This is line 2");
+            pw.println("And this is line 3");
+
+            pw.close(); // Close the PrintWriter to flush the output
+
+            System.out.println("Data has been written to " + filename);
+        } catch (IOException e) {
+            System.err.println("Error writing to file: " + e.getMessage());
+        }
+    }
+}
+//button[normalize-space()='Add to cart']
+//div[@class='products-wrapper']//div[2]//div[1]//div[2]//div[3]//div[2]//button[1]
+//div[@class='item-grid']//div[1]//div[1]//div[2]//div[3]//div[2]//button[1]
